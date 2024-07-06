@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokenization of Art Auction</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Example inline styles for simplicity */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: black;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header__logo {
+            display: flex;
+            align-items: center;
+        }
+        .header__logo img {
+            max-height: 40px; /* Adjust height as needed */
+        }
+        .header__logo-name {
+            color: white;
+            font-size: 28px; /* Larger font size */
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        .header__nav {
+            flex: 1;
+            margin-left: 20px;
+        }
+        .header__nav-list {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-end; /* Aligns items to the end of the flex container */
+        }
+        .header__nav-list li {
+            margin-left: 10px; /* Adjusted margin to reduce space between items */
+        }
+        .header__nav-list li:first-child {
+            margin-left: 0; 
+        }
+        .header__nav-list li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .header__actions {
+            margin-left: 20px;
+        }
+        .hero {
+            background: url('hero-bg.jpg') center center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            background-color: black;
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+        .features {
+            display: flex;
+            justify-content: space-around;
+            padding: 40px 20px;
+            background-color: #f9f9f9;
+            align-items: flex-start; /* Align items at the start vertically */
+            flex-wrap: wrap; /* Enable wrapping to manage content on smaller screens */
+        }
+        .feature {
+            text-align: center;
+            width: calc(33.33% - 40px); /* Adjusted width for three features with spacing */
+            margin-bottom: 50px; /* Space between features */
+        }
+        .feature img {
+            width: 200px; /* Adjusted width */
+            height: 200px; /* Adjusted height */
+            margin-bottom: 20px;
+        }
+        .feature h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .feature p {
+            font-size: 16px;
+            color: #666;
+        }
+        .gallery {
+            padding: 40px 20px;
+            background-color: #f9f9f9; /* Same color as the feature section */
+        }
+        .gallery h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .gallery__images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .gallery__images img {
+            width: 30%;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .stellar-art-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 20px;
+            background-color: #f9f9f9; /* Same color as the feature section */
+            margin-top: -20px;
+        }
+        .stellar-art-section__container {
+            display: flex;
+            width: 100%;
+            max-width: 1200px; /* Adjusted max-width for a bigger look */
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .stellar-art-section__logo {
+            flex: 1;
+            max-width: 200px; /* Increased max-width */
+            margin-right: 20px;
+            text-align: center;
+        }
+        .stellar-art-section__logo img {
+            width: 100%;
+        }
+        .stellar-art-section__content {
+            flex: 3; /* Increased flex to make content section larger */
+            text-align: left;
+        }
+        .stellar-art-section__content h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .stellar-art-section__content p {
+            font-size: 18px;
+            max-width: 800px;
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="header__logo">
+        <img src="logo.jpg" alt="Tokenization of Art Auction">
+        <span class="header__logo-name">Stellar Art</span>
+    </div>
+    <nav class="header__nav">
+        <ul class="header__nav-list">
+            <li><a id="home-link" href="index.html">Home</a></li>
+            <li><a id="about-us-link" href="about-us.html">About Us</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Welcome to Stellar Art Auction</h1>
+        <p>Revolutionizing the art world with blockchain technology</p>
+    </section>
+
+    <!-- Stellar Art Section -->
+    <section class="stellar-art-section">
+        <div class="stellar-art-section__container">
+            <div class="stellar-art-section__logo">
+                <img src="logo.jpg" alt="Stellar Art Logo">
+            </div>
+            <div class="stellar-art-section__content">
+                <h2>Stellar Art</h2>
+                <p>Stellar art combines celestial inspiration with human creativity. It’s like capturing the magic of stars, galaxies, and cosmic wonders on canvas, in sculptures, or through digital media. Artists draw from the vastness of the universe, infusing their work with stardust and imagination. Whether it’s a mesmerizing nebula painting or a sculpture that echoes the elegance of constellations, stellar art invites us to gaze beyond Earth and dream among the stars.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="feature">
+            <img src="feature1.png" alt="Feature 1">
+            <h3>Fractional Ownership</h3>
+            <p>Invest in art like never before with fractional ownership.</p>
+        </div>
+        <div class="feature">
+            <img src="feature2.jpg" alt="Feature 2">
+            <h3>Secure Transactions</h3>
+            <p>Experience the security and transparency of blockchain.</p>
+        </div>
+        <div class="feature">
+            <img src="feature3.jpg" alt="Feature 3">
+            <h3>Global Access</h3>
+            <p>Join a global community of art collectors and investors.</p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+        <h2>Featured Artworks</h2>
+        <div class="gallery__images">
+            <img src="art1.png" alt="Art 1">
+            <img src="art2.png" alt="Art 2">
+            <img src="art3.png" alt="Art 3">
+        </div>
+    </section>
+
+</main>
+<footer>
+    <p style="text-align: center;">Contributors © 2024 | The Checkmate team. All rights reserved.</p>
+</footer>
+</body>
+</html>
+
